@@ -1,189 +1,137 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rometh Torm | Kirjanik & Muusik</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rometh Torm</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto Slab', serif;
-      background: linear-gradient(135deg, #1a1a1a, #111);
-      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #f5f5f5;
       line-height: 1.6;
-    }
-    header {
-      background: #151515;
-      padding: 50px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      color: #e63946;
-    }
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.2em;
-      color: #aaa;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: rgba(20, 20, 20, 0.85);
-      padding: 30px 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(230, 57, 70, 0.4);
-    }
-    h2 {
-      margin-top: 0;
-      font-size: 2em;
-      border-bottom: 2px solid #e63946;
-      padding-bottom: 10px;
-    }
-    h3 {
-      color: #f77f00;
-    }
-    .footer {
-      text-align: center;
       padding: 20px;
-      font-size: 0.9em;
-      color: #777;
-      background: #151515;
+    }
+    h1, h2, h3 {
+      color: #ff6b6b;
     }
     a {
-      color: #ff7777;
+      color: #7ec8e3;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
-
-    /* Modaalaken */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.7);
+    .section {
+      margin-bottom: 50px;
     }
-    .modal-content {
-      background-color: #1a1a1a;
-      margin: 10% auto;
-      padding: 30px;
-      border: 1px solid #e63946;
-      width: 90%;
-      max-width: 800px;
+    .book-cover {
+      width: 120px;
+      margin-right: 15px;
+    }
+    .hidden-box {
+      background-color: #222;
+      padding: 20px;
       border-radius: 10px;
-      color: #eee;
-      box-shadow: 0 0 20px rgba(230, 57, 70, 0.6);
+      margin-top: 20px;
+      display: none;
+      animation: fadeIn 0.8s ease-in-out;
     }
-    .close {
-      color: #f77f00;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
-    .modal-btn {
-      display: block;
-      margin: 40px auto;
-      padding: 12px 24px;
-      background: #e63946;
+    .toggle-button {
+      background-color: #ff6b6b;
       color: white;
       border: none;
+      padding: 10px 20px;
       border-radius: 5px;
-      font-size: 1.1em;
       cursor: pointer;
+      font-size: 16px;
       transition: background 0.3s;
     }
-    .modal-btn:hover {
-      background: #c62e3d;
+    .toggle-button:hover {
+      background-color: #e63946;
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <header class="section">
     <h1>Rometh Torm</h1>
-    <p>Kirjanik & Muusik | Elu teekond ja eneseleidmine</p>
+    <p><strong>Kirjanik & Muusik</strong> | Elu teekond ja eneseleidmine</p>
   </header>
 
-  <section>
+  <section class="section">
     <h2>Minust</h2>
-    <p>Minu nimi on Rometh Torm (südinud 23.04.1987)... Mitte kunagi pole liiga hilja alustada.</p>
-
-    <h3>Minu kasvamise teekond</h3>
-    <p>Elu on olnud mulle vahel raske ja keeruline... saab alati uuesti püsti tõusta.</p>
-
-    <h3>Minu sõnum</h3>
-    <p>„Iga pimeduse hetk kannab endas võimalust uue valguse sündimiseks...“</p>
+    <p>Minu nimi on Rometh Torm (sündinud 23.04.1987). Olen elus rängalt eksinud ja langenud müüride taha, kuid viimased kaheksa aastat annan endast parima, et liikuda eluteel ülespoole. Kirjandus, muusika ja haridus on mind aidanud. Mitte kunagi pole liiga hilja alustada.</p>
   </section>
 
-  <section>
+  <section class="section">
+    <h2>Minu kasvamise teekond</h2>
+    <p>Elu on olnud mulle vahel raske ja keeruline, kuid iga takistus on õpetanud midagi uut – kannatlikkust, enese mõistmist ja vastupidavust. Olen õppinud, et tegelikult on iga hetk uus võimalus oma rada muuta ja oma tulevikku kujundada. Isegi kui oled kukkunud sügavale, saab alati uuesti püsti tõusta.</p>
+  </section>
+
+  <section class="section">
+    <h2>Minu kõige sügavam sõnum</h2>
+    <blockquote>„Iga pimeduse hetk kannab endas võimalust uue valguse sündimiseks. Ära karda oma varjusid – nad näitavad teed tugevamaks saamiseks.“<br>– Rometh Torm</blockquote>
+  </section>
+
+  <section class="section">
     <h2>Raamatud</h2>
-    <h3>Pudeliga pähe</h3>
-    <p>„Pudeliga pähe“ on detailne ja šokeeriv autobiograafiline romaan...</p>
-    <h3>Dekadent pimeduses. Paralleelmaailm</h3>
-    <p>„Dekadent pimeduses. Paralleelmaailm“ viib lugeja elu varjupoolele...</p>
+    <p><strong>Pudeliga pähe</strong> – autobiograafiline romaan kurjategijaks kujunemisest. <br>
+    <a href="#">Apollo</a> | <a href="#">Rahva Raamat</a> | <a href="#">Vanaraamat</a></p>
+
+    <p><strong>Dekadent pimeduses. Paralleelmaailm</strong> – aus lugu mehest, kes otsustas võidelda iseendaga. <br>
+    <a href="#">Apollo</a> | <a href="#">Rahva Raamat</a> | <a href="#">Raamatukodu</a></p>
+
+    <p><strong>Linn ei unusta</strong> – uus toorem ja aus romaan. Ilmub varsti.</p>
   </section>
 
-  <section>
+  <section class="section">
+    <h2>Muusika</h2>
+    <p>Kuula mu muusikat ansambliga Tormihoiatus – lood elust, minevikust ja otsingutest:<br>
+      🎵 <a href="#">YouTube</a> | 🎷 <a href="#">Spotify</a>
+    </p>
+  </section>
+
+  <section class="section">
     <h2>Haridus</h2>
     <ul>
       <li>2021 – abikoka kursus</li>
       <li>2022 – arvuti baaskursus</li>
-      <li>2022 – projekteerimine ja joonestamine AUTOCAD</li>
+      <li>2022 – AUTOCAD projekteerimine</li>
       <li>2024 – gümnaasium</li>
-      <li>2025 – puidupingioperaatori eriala</li>
+      <li>2025 – puidupingioperaator</li>
     </ul>
   </section>
 
-  <section>
-    <h2>Muusika</h2>
-    <p>Kuula mu muusikat ansambliga Tormihoiatus – lood elust, minevikust ja otsingutest:</p>
-    <ul>
-      <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
-      <li><a href="https://spotify.com" target="_blank">Spotify</a></li>
-    </ul>
-  </section>
-
-  <section>
+  <section class="section">
     <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:romethtorm87@gmail.com">romethtorm87@gmail.com</a></p>
+    <p>E-mail: <a href="mailto:romethtorm87@gmail.com">romethtorm87@gmail.com</a></p>
   </section>
 
-  <!-- NUPP MODAALAKNA AVAMISEKS -->
-  <button class="modal-btn" onclick="document.getElementById('myModal').style.display='block'">
-    Loe minu sügavamat lugu
-  </button>
-
-  <!-- MODAALAKEN -->
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-      <h2>Minu teekond – eksimused, valu ja uskumus endasse</h2>
-      <p>Minu elu on olnud täis eksimusi ja valeotsuseid, mis on viinud mind sellele teele, kus ma täna olen...<br><br>
-      (Siia on kogu pikk tekst juba lisatud – võid seda vajadusel edasi kohendada või tükeldada)</p>
+  <section class="section">
+    <button class="toggle-button" onclick="toggleBox()">🕯️ Loe: Minu teekond – eksimused, valu ja uskumus endasse</button>
+    <div id="hiddenText" class="hidden-box">
+      <p><strong>Minu teekond – eksimused, valu ja uskumus endasse</strong></p>
+      <p><!-- SIIA LISATUD TEKST -->Minu elu on olnud täis eksimusi ja valeotsuseid, mis on viinud mind sellele teele, kus ma täna olen... [täistekst siia mahub, näide lühendatud]</p>
+      <p>...Elu on lühike ja aeg on kingitus – ära lase sellel mööda lipsata ilma, et oleksid püüdnud unistada ja tegutseda.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="footer">
-    &copy; 2025 Rometh Torm
-  </div>
+  <footer class="section">
+    <p>© 2025 Rometh Torm</p>
+  </footer>
 
   <script>
-    // Sulge modaal, kui klikkida väljapoole
-    window.onclick = function(event) {
-      var modal = document.getElementById("myModal");
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
+    function toggleBox() {
+      const box = document.getElementById("hiddenText");
+      box.style.display = box.style.display === "none" || box.style.display === "" ? "block" : "none";
     }
   </script>
-
 </body>
 </html>
 
