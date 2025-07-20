@@ -3,74 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <title>Rometh Torm | Kirjanik & Muusik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1a1a1a;
-      color: #f2f2f2;
+      font-family: 'Roboto Slab', serif;
+      background: linear-gradient(135deg, #1a1a1a, #111);
+      color: #eee;
+      line-height: 1.6;
     }
-
     header {
-      background-color: #222;
-      padding: 30px;
+      background: #151515;
+      padding: 50px 20px;
       text-align: center;
       position: relative;
     }
-
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      color: #e63946;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+      color: #aaa;
+    }
     header img {
       position: absolute;
       top: 10px;
       right: 10px;
-      height: 80px;
+      width: 100px;
+      opacity: 0.3;
     }
-
-    h1 {
-      margin-bottom: 10px;
-      font-size: 2.5em;
-    }
-
-    p.subtitle {
-      font-style: italic;
-      font-size: 1.2em;
-      color: #ccc;
-    }
-
     section {
-      padding: 40px 20px;
       max-width: 900px;
-      margin: auto;
+      margin: 40px auto;
+      background: rgba(20,20,20,0.85);
+      padding: 30px 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(230,57,70,0.4);
     }
-
     h2 {
-      border-bottom: 2px solid #555;
+      margin-top: 0;
+      font-size: 2em;
+      border-bottom: 2px solid #e63946;
       padding-bottom: 10px;
     }
-
+    section#minust h3 {
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: #f77f00;
+    }
     .raamat {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+      padding: 15px;
+      border-left: 4px solid #e63946;
+      background: #1f1f1f;
+      border-radius: 4px;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
-
-    .raamat img {
-      max-width: 200px;
-      margin: 10px 0;
-      border: 1px solid #444;
+    .raamat:hover {
+      background: #292929;
+      transform: translateX(5px);
     }
-
+    .raamat h3 {
+      margin: 0 0 10px;
+      color: #f77f00;
+    }
+    .linkid a {
+      margin-right: 12px;
+      color: #ff7777;
+      font-weight: bold;
+    }
+    .linkid a:hover {
+      text-decoration: underline;
+    }
     a {
-      color: #ff4444;
+      color: #ff7777;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
+    .musikalingid a {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 8px 16px;
+      background: #e63946;
+      color: #fff;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .musikalingid a:hover {
+      background: #b72f3f;
+    }
     .footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
       color: #777;
+      background: #151515;
+    }
+    @media (max-width: 600px) {
+      header img {
+        width: 70px;
+        top: 5px;
+        right: 5px;
+      }
     }
   </style>
 </head>
@@ -78,15 +118,26 @@
 
   <header>
     <h1>Rometh Torm</h1>
-    <p class="subtitle">Kirjanik & Muusik | Elu teekond ja eneseleidmine</p>
-    <img src="images/sõnn.png" alt="Sõnn - tribal">
+    <p>Kirjanik & Muusik | Elu teekond ja eneseleidmine</p>
+    <img src="images/sonn.png" alt="Sõnn - tribal">
   </header>
 
   <section id="minust">
     <h2>Minust</h2>
-    <p>Olen Rometh Torm (sündinud 23.04.1987). Olen elus rängalt eksinud ja langenud müüride taha, kuid viimased kaheksa aastat annan endast parima, et liikuda eluteel ülespoole. Kirjandus, muusika ja haridus on mind aidanud. Mitte kunagi pole liiga hilja alustada.</p>
-    <p>Elu on õpetanud mind kannatlikkust ja vastupidavust. Iga takistus võib olla võimalus. Tõeline kasvamine tähendab pühendumist – iga päev samm parema mina poole. Täna jagan oma lugu, et innustada ka teisi oma teekonda alustama.</p>
-    <p><strong>E-mail:</strong> romethtorm87@gmail.com</p>
+    <p>
+      Olen Rometh Torm (sündinud 23.04.1987). Olen elus rängalt eksinud ja langenud müüride taha, kuid viimased kaheksa aastat annan endast parima, et liikuda eluteel ülespoole. Kirjandus, muusika ja haridus on mind aidanud. Mitte kunagi pole liiga hilja alustada.
+    </p>
+    <h3>Minu kasvamise teekond</h3>
+    <p>
+      Elu on olnud mulle vahel raske ja keeruline, kuid iga takistus on õpetanud midagi uut – kannatlikkust, enese mõistmist ja vastupidavust. Olen õppinud, et tegelikult on iga hetk uus võimalus oma rada muuta ja oma tulevikku kujundada. Isegi kui oled kukkunud sügavale, saab alati uuesti püsti tõusta.
+    </p>
+    <p>
+      Usun, et tõeline kasvamine ei tähenda täiuslikkust, vaid järjepidevat pingutust – teha iga päev üks väike samm unistuste ja eesmärkide poole. See on elu võlu – võime valida, kuidas reageerida raskustele ning leida valgus ka kõige pimedamatest hetkedest.
+    </p>
+    <p>
+      Olen kogenud, et mitte kunagi pole liiga hilja hakata endasse uskuma, astuda vastu oma minevikule ning kirjutada oma loo uus peatükk. Just see teekond on mind vorminud kirjanikuks ja muusikuks, kes täna siiralt jagab oma lugu ja inspireerib teisi.
+    </p>
+    <p><strong>E-mail:</strong> <a href="mailto:romethtorm87@gmail.com">romethtorm87@gmail.com</a></p>
   </section>
 
   <section id="raamatud">
@@ -94,42 +145,56 @@
 
     <div class="raamat">
       <h3>Pudeliga pähe</h3>
-      <p>„Pudeliga pähe“ on detailne ja šokeerivaid saladusi paljastav autobiograafiline romaan, mis kirjeldab väga tõetruult kurjategijaks kujunemise teekonda. Täis valusat tõde, kuidas noorest inimesest saab tapja, kuigi ta kardab vägivalda ja vangiminekut.</p>
-      <p><strong>Osta:</strong> 
-        <a href="https://www.apollo.ee/et/pudeliga-pahe.html" target="_blank">Apollo</a>,
-        <a href="https://www.vanaraamat.ee/Rometh_Torm_Pudeliga_pahe" target="_blank">Vanaraamat</a>,
-        <a href="https://www.osta.ee/rometh-torm-pudeliga-pahe-235572876.html" target="_blank">Osta.ee</a>
+      <p>
+        „Pudeliga pähe“ on detailne ja šokeeriv autobiograafiline romaan, mis toob esile kurjategijaks kujunemise valusa teekonna. Täis ausust ja elutõde.
+      </p>
+      <p class="linkid"><strong>Osta:</strong>
+        <a href="https://www.apollo.ee/pudeliga-pahe.html" target="_blank">Apollo</a> |
+        <a href="https://www.rahvaraamat.ee/pudeliga-pahe" target="_blank">Rahva Raamat</a> |
+        <a href="https://www.vanaraamat.ee/Rometh_Torm_Pudeliga_pahe" target="_blank">Vanaraamat</a>
       </p>
     </div>
 
     <div class="raamat">
       <h3>Dekadent pimeduses. Paralleelmaailm</h3>
-      <p>„Dekadent pimeduses. Paralleelmaailm“ viib sind sügavale elu varjupoolele – alkohol, narkootikumid, vägivald ja vargused. See tõsieluline lugu paljastab naiivsete inimeste usaldust ja ühiskonna oskamatust aidata vägivallaohvreid. Julge ja aus sissevaade maailma, mida paljud ei näe.</p>
-      <p><strong>Osta:</strong> 
-        <a href="https://raamatukodu.ee/dekadent-pimeduses-paralleelmaailm/" target="_blank">Raamatukodu</a>,
-        <a href="https://www.apollo.ee/et/dekadent-pimeduses.html" target="_blank">Apollo</a>
+      <p>
+        „Dekadent pimeduses. Paralleelmaailm“ viib lugeja elu varjupoolele — alkohol, narkootikumid, vägivald ja usaldusmurded. Aus ja mõtlemapanev.
+      </p>
+      <p class="linkid"><strong>Osta:</strong>
+        <a href="https://www.apollo.ee/dekadent-pimeduses.html" target="_blank">Apollo</a> |
+        <a href="https://www.rahvaraamat.ee/dekadent-pimeduses" target="_blank">Rahva Raamat</a> |
+        <a href="https://raamatukodu.ee/dekadent-pimeduses-paralleelmaailm/" target="_blank">Raamatukodu</a>
       </p>
     </div>
 
     <div class="raamat">
       <h3>Linn ei unusta</h3>
-      <p><em>Uus raamat – peagi ilmumas</em></p>
-      <p>Tallinn on julm. Siin ei anta teist võimalust – vaid järgmine vale, järgmine rusikas. Varjud võivad haarata kõiki, kes jäävad liiga kauaks üksi. Tooress, aus ja halastamatu järg raamatule „Dekadent pimeduses“.</p>
+      <p><em>Uus raamat – ilmub varsti</em></p>
+      <p>
+        Tallinn on julm. Siin ei anta teist võimalust — vaid järgmine vale, järgmine rusikas. Varjud võivad haarata kõiki, kes jäävad liiga kauaks üksi. Lugu ellujäämisest ja valguse leidmisest pimeduses.
+      </p>
     </div>
   </section>
 
   <section id="muusika">
     <h2>Muusika</h2>
-    <p>Minu muusikat saab kuulata YouTube’is ja Spotify’s – <strong>Ansambel Tormihoiatus</strong>.</p>
     <p>
-      <a href="https://www.youtube.com/results?search_query=Tormihoiatus" target="_blank">YouTube</a> |
-      <a href="https://open.spotify.com/search/Tormihoiatus" target="_blank">Spotify</a>
+      Kuula mu muusikat ansambliga <strong>Tormihoiatus</strong> – lood elust, minevikust ja otsingutest:
     </p>
+    <div class="musikalingid">
+      <a href="https://www.youtube.com/results?search_query=Tormihoiatus" target="_blank">🎵 YouTube</a>
+      <a href="https://open.spotify.com/search/Tormihoiatus" target="_blank">🎧 Spotify</a>
+    </div>
   </section>
 
   <section id="haridus">
     <h2>Haridus</h2>
-    <p>2021 lõpetasin abikoka kursuse, 2024 gümnaasiumi ning 2025 puidupingioperaatori eriala. Haridus on olnud minu jaoks uue elu alustala.</p>
+    <p>
+      2021 – abikoka kursus<br>
+      2024 – gümnaasium<br>
+      2025 – puidupingioperaatori eriala<br>
+      <em>Haridus on minu kasvamise alus ja uus algus.</em>
+    </p>
   </section>
 
   <footer class="footer">
@@ -138,5 +203,4 @@
 
 </body>
 </html>
-
 
